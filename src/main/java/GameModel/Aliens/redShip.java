@@ -75,9 +75,9 @@ public class redShip implements GameObject, AlienSpaceInvadersModel {
 	@Override
 	public void moveAlien() {
 		if (movingRight) {
-            x += speed; // flytt til høyre
+            x += speed; 
         } else {
-            x -= speed; // flytt til venstre
+            x -= speed; 
         }
 	}
 
@@ -94,7 +94,7 @@ public class redShip implements GameObject, AlienSpaceInvadersModel {
 	@Override
 	public void kill() {
 		isAlive = false;
-		deathTicks++;
+		deathTicks = 0;
 	}
 
 	@Override

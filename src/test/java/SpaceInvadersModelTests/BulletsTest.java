@@ -1,11 +1,13 @@
 package SpaceInvadersModelTests;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
 import GameModel.Bullet;
+import GameModel.SpaceInvadersBoard;
 import GameModel.SpaceInvadersModel;
 import GameModel.Aliens.AlienType;
 import GameModel.Aliens.Aliens;
@@ -14,11 +16,16 @@ import GameModel.Aliens.redShip;
 public class BulletsTest {
 	
 	SpaceInvadersModel model = new SpaceInvadersModel();
+	SpaceInvadersBoard board = new SpaceInvadersBoard(23,26);
 	Bullet bullet = model.createBullet();
 	
 	@Test
 	public void createBulletTest() {
+		int width = (board.cellSize() / 8) - 2;
+		int height = board.cellSize() / 2;
 	    assertTrue(model.getBullets().contains(bullet));
+	    assertEquals(width, bullet.getWidth());
+	    assertEquals(height, bullet.getHeight());
 	}
 	
 	@Test

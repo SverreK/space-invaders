@@ -189,36 +189,4 @@ public class SpaceInvadersView extends JPanel {
 		 Inf101Graphics.drawCenteredString(g2, text, x, y);
 		 
 	 }
-	 
-	 private void drawGrid(Graphics2D g2) {
-		    GridDimension dim = model.getDimension();
-		    int cellSize = dim.cellSize();
-		    int cols = dim.cols();
-		    int rows = dim.rows();
-
-		    // Kalkuler startposisjon for å midtstille gridet
-		    int gridWidth = cellSize * cols;
-		    int gridHeight = cellSize * rows;
-		    int offsetX = (this.getWidth() - gridWidth) / 2;
-		    int offsetY = (this.getHeight() - gridHeight) / 2;
-
-		    g2.setColor(new Color(255, 255, 255, 40)); // lys gjennomsiktig hvit for grid-linjer
-		    g2.setStroke(new BasicStroke(1f));
-
-		    // Tegn vertikale linjer
-		    for (int col = 0; col <= cols; col++) {
-		        int x = offsetX + col * cellSize;
-		        g2.drawLine(x, offsetY, x, offsetY + gridHeight);
-		    }
-
-		    // Tegn horisontale linjer
-		    for (int row = 0; row <= rows; row++) {
-		        int y = offsetY + row * cellSize;
-		        g2.drawLine(offsetX, y, offsetX + gridWidth, y);
-		    }
-		}
-
-	
-	
-
 }

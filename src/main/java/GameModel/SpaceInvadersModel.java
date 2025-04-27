@@ -45,7 +45,8 @@ public class SpaceInvadersModel implements ViewableSpaceInvadersModel, Controlla
 	private int REDSHIP_KILL_INTERVAL = 1000;
 	
 	//Level and score
-	private int score, hiScore, level;
+	private int level = 1;
+	private int score, hiScore;
 	
 	/**
 	 * Default constructor for the SpaceInvadersModel
@@ -448,7 +449,7 @@ public class SpaceInvadersModel implements ViewableSpaceInvadersModel, Controlla
      * Proceeds the game to the next level after all aliens are eliminated
      * Creates a new alien grid and empties all lists to save memory
      */
-	private void nextLevel() {
+	public void nextLevel() {
 		level++;
 		aliens.clear();
 		createAlienGrid(5, 11);
