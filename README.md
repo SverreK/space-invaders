@@ -1,2 +1,4 @@
-# Empty Java Project
-This repository contains an empty Java project which you can use for anything :) 
+**Space Invaders Game**
+Dette er ein java implementasjon av arkadespelet Space Invaders.
+
+Applikasjonen
