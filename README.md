@@ -1,4 +1,6 @@
 Space Invaders Game
+
+
 Dette er ein Java-implementasjon av arkadespelet Space Invaders.
 
 Om applikasjonen
