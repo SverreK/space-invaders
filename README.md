@@ -29,3 +29,8 @@ Swing for spelepanelet (grafisk brukargrensesnitt)
 java.awt for teikning av grafikk, handtering av tastaturinput og spel-ticks
 
 Dette inkluderer java.awt.Graphics, java.awt.event.* og javax.swing.Timer.
+
+
+Video:
+
+https://youtu.be/EQQfEMpH6Dg
